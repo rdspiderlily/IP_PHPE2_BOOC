@@ -77,7 +77,7 @@
           $cities = ["Tokyo", "Delhi", "Shanghai", "São Paulo", "Dhaka", "Cairo", "Mexico City", "Beijing", "Mumbai", "Osaka"];
           
           function printCities($cities) {
-              foreach ($cities as $index => $city) {
+              foreach ($cities as $city) {
                   echo "$city, ";
               }
           }
