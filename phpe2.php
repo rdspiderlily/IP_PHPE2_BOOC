@@ -76,31 +76,24 @@
       <?php
           $cities = ["Tokyo", "Delhi", "Shanghai", "São Paulo", "Dhaka", "Cairo", "Mexico City", "Beijing", "Mumbai", "Osaka"];
           
-          function printCities($cities) {
-              foreach ($cities as $city) {
-                  echo "$city, ";
-              }
+          foreach ($cities as $city) {
+            echo "$city, ";
           }
 
           function printUnorderedList($cities) {
-              echo "<ul>";
-              foreach ($cities as $city) {
-                  echo "<li>$city</li>";
-              }
-              echo "</ul>";
+            echo "<ul>";
+            foreach ($cities as $city) {
+                echo "<li>$city</li>";
+            }
+            echo "</ul>";
           }
-
-          printCities($cities);
-          echo "<br>";
           
           sort($cities);
           printUnorderedList($cities);
           echo "<br>";
 
-          $addCities = ["Los Angeles", "Calcutta", "Osaka", "Beijing"];
-          foreach ($addCities as $city) {
-              $cities[] = $city;
-          }
+          $addCities = ["Los Angeles", "Calcutta"];
+          $cities = array_merge($cities, $addCities);
 
           sort($cities);
           printUnorderedList($cities);
